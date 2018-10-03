@@ -4,12 +4,10 @@ document.addEventListener("turbolinks:load", function() {
       connectWith: '.task-type-col',
 
       update: function(e, ui) {
-        console.log(this.id + ' >> ' + $(this).sortable('serialize'));
-
         $.ajax({
           url: $(this).data('url'),
           type: "PATCH",
-          data: $(this).sortable('serialize'),
+          data: $(this).sortable('serialize') + '&task_type=' + this.id.replace('_list', ''),
           success: function(response) {}
         });
       }
