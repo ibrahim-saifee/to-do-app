@@ -66,7 +66,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: #7da2b7;
 }
 
 [tabindex="-1"]:focus {
@@ -6098,7 +6098,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: #21506b !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -8982,4 +8982,30 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
+
+div.portfolio-item {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+h3.task-type {
+  text-align: center;
+  color: white;
+}
+
+.page-container {
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+div.page-body-container {
+  padding-top: 15px;
+  padding-bottom: 25px
+}
+
+div.task-type-col {
+  /* background-color: #5b7988; */
+  background-color: #236e92;
+  padding-top: 15px;
+  padding-bottom: 15px
+}

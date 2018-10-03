@@ -24,5 +24,8 @@
 //= require jquery-ui
 
 //= require jquery-ui/effect.all
+//= require jquery-ui/widgets/sortable
+
+//= require drag_and_drop
 
 //= require_tree .

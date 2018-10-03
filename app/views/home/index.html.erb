@@ -1,25 +1,58 @@
-
 <!-- Page Content -->
-<div class="container">
-
+<div class="container page-container">
   <!-- Page Heading -->
-  <h1 class="my-4">Page Heading
-    <small>Secondary Text</small>
-  </h1>
+  <button class="btn">
+    Add New Task &nbsp; <i class="fa fa-plus"></i>
+  </button>
 
-  <div class="row">
-    <% 10.times.each do %>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <div class="card-body">
-            <h3 class="card-title">
-              <a href="#">Task Title</a>
-            </h3>
-            <p class="card-text">this is description this is deciptnio</p>
+  <div class="row page-body-container">
+    <div id="pending-list" class="col-lg-4 task-type-col" data-url='#'>
+      <h3 class="task-type pin"> Pending Tasks </h3>
+      <% 5.times.each do |index| %>
+        <div class="col-sm-12 portfolio-item" id=p_"<%= index %>">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title">
+                <a href="#">Task Title <%= index %> (Pending) </a>
+              </h3>
+              <p class="card-text">this is description this is deciptnio</p>
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
+
+    <div id="in-progress-list" class="col-lg-4 task-type-col" data-url='#'>
+      <h3 class="task-type pin"> In-progress Tasks </h3>
+      <% 5.times.each do |index| %>
+        <div class="col-sm-12 portfolio-item" id=ip_"<%= index %>">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title">
+                <a href="#">Task Title <%= index %> (In-progress) </a>
+              </h3>
+              <p class="card-text">this is description this is deciptnio</p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div id="completed-list" class="col-lg-4 task-type-col" data-url='#'>
+      <h3 class="task-type pin"> Completed Tasks </h3>
+      <% 5.times.each do |index| %>
+        <div class="col-sm-12 portfolio-item" id="c_<%= index %>" >
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title">
+                <a href="#">Task Title <%= index %> (Completed) </a>
+              </h3>
+              <p class="card-text">this is description this is deciptnio</p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
   <!-- /.row -->
 </div>
