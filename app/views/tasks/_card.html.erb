@@ -1,0 +1,14 @@
+<div class="col-sm-12 portfolio-item" id="<%= dom_id(task) %>">
+  <div class="card h-100">
+    <%= link_to task, method: :delete, data: { confirm: 'Are you sure want to delete this task?' }, class: 'btn text-right card-cross' do %>
+      &times;
+    <% end %>
+
+    <div class="card-body">
+      <h3 class="card-title">
+        <a href="#"> <%= "#{task.title} (#{task.type})" %> </a>
+      </h3>
+      <p class="card-text"> <%= task.description %> </p>
+    </div>
+  </div>
+</div>

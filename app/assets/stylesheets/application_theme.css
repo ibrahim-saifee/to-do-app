@@ -9017,3 +9017,8 @@ div.task-type-col {
   content: "*";
   color: red;
 }
+
+a.card-cross {
+  margin-bottom: -30px;
+  color: black;
+}

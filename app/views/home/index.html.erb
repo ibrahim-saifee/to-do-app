@@ -14,16 +14,7 @@
       <div id="<%= "#{task_type}_list" %>" class="col-lg-4 task-type-col" data-url='<%= update_position_tasks_path %>'>
         <h3 class="task-type pin"> <%= "#{task_type.to_s.humanize.capitalize} Tasks" %> </h3>
         <% tasks.each do |task| %>
-          <div class="col-sm-12 portfolio-item" id="<%= dom_id(task) %>">
-            <div class="card h-100">
-              <div class="card-body">
-                <h3 class="card-title">
-                  <a href="#"> <%= "#{task.title} (#{task.type})" %> </a>
-                </h3>
-                <p class="card-text"> <%= task.description %> </p>
-              </div>
-            </div>
-          </div>
+          <%= render partial: 'tasks/card', locals: { task: task } %>
         <% end %>
       </div>
     <% end %>

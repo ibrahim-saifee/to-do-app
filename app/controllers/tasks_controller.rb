@@ -7,11 +7,17 @@ class TasksController < ApplicationController
 
   def update_position
     params[:task] && params[:task].each_with_index do |task_id, index|
-      Task.find_by_id(task_id).update_attributes(position: index,
-                                                 status: params[:task_type])
+      task = Task.find_by_id(task_id)
+      task.update_attributes(position: index, status: params[:task_type]) if task
     end
 
     render json: { status: 200 }
+  end
+
+  def destroy
+    task = Task.find_by_id(params[:id])
+    task.destroy if task
+    redirect_to root_path
   end
 
   private
