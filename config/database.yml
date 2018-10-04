@@ -50,7 +50,4 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: to-do-app_production
-  username: to-do-app
-  password: <%= ENV['TO-DO-APP_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
