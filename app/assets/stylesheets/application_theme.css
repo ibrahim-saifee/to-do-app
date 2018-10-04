@@ -9011,7 +9011,7 @@ div.task-type-col {
   /* background-color: #5b7988; */
   background-color: #236e92;
   padding-top: 15px;
-  padding-bottom: 15px
+  padding-bottom: 15px;
 }
 
 .form-group .control-label.required:after {
@@ -9031,4 +9031,16 @@ span.card-due-date {
 
 i.fa-edit {
   font-weight: 100;
+}
+
+a.devise-links {
+  margin-bottom: -30px;
+  color: white;
+}
+
+div.devise-forms {
+  background-color: #236e92;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 20px;
 }
