@@ -1,19 +1,19 @@
 class TasksController < ApplicationController
 
   def create
-    Task.create(task_params)
+    current_user.tasks.create(task_params)
     redirect_to root_path
   end
 
   def update
-    task = Task.find_by_id(params[:id])
+    task = current_user.tasks.find_by_id(params[:id])
     task.update(task_params) if task
     redirect_to root_path
   end
 
   def update_position
     params[:task] && params[:task].each_with_index do |task_id, index|
-      task = Task.find_by_id(task_id)
+      task = current_user.tasks.find_by_id(task_id)
       task.update_attributes(position: index, status: params[:task_type]) if task
     end
 
@@ -21,7 +21,7 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    task = Task.find_by_id(params[:id])
+    task = current_user.tasks.find_by_id(params[:id])
     task.destroy if task
     redirect_to root_path
   end

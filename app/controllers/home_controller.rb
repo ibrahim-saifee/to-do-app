@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    all_tasks = Task.includes(:task_type)
+    all_tasks = current_user.tasks.includes(:task_type)
 
     @tasks = {
       pending: all_tasks.pending,

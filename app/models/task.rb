@@ -4,6 +4,7 @@ class Task < ApplicationRecord
   validates :title, :status, presence: true
 
   belongs_to :task_type
+  belongs_to :user
 
   default_scope { order(position: :asc) }
 
