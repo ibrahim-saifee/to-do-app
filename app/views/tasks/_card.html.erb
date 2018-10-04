@@ -8,6 +8,13 @@
       <h3 class="card-title">
         <%= "#{task.title} (#{task.type})" %>
       </h3>
+
+      <% if task.due_date.present? %>
+        <span class="card-due-date">
+          <%= "Due on: #{task.due_date.strftime("%b %d, %Y")}" %>
+        </span>
+      <% end %>
+
       <p class="card-text"> <%= task.description %> </p>
     </div>
   </div>

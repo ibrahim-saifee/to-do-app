@@ -23,7 +23,10 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:title, :description,
-                                 :due_date, :task_type_id)
+    params.require(:task)
+          .permit(:title, :description, :due_date, :task_type_id).to_h
+          .merge(due_date: nil) do |key, date, default|
+            Date.strptime(date, "%m/%d/%Y") rescue default
+          end
   end
 end
