@@ -7,7 +7,7 @@
     </button>
   </a>
 
-  <%= render template: 'tasks/new' %>
+  <%= render 'tasks/form', task: @task, modal_id: 'new_task_modal' %>
 
   <div class="row page-body-container">
     <% @tasks.each do |task_type, tasks| %>

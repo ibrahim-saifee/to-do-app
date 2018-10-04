@@ -5,6 +5,12 @@ class TasksController < ApplicationController
     redirect_to root_path
   end
 
+  def update
+    task = Task.find_by_id(params[:id])
+    task.update(task_params) if task
+    redirect_to root_path
+  end
+
   def update_position
     params[:task] && params[:task].each_with_index do |task_id, index|
       task = Task.find_by_id(task_id)

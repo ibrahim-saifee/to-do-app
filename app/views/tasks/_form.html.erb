@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade new_task_modal" role="dialog">
+<div class="modal fade <%= modal_id %>" role="dialog">
   <div class="modal-dialog" style="max-width: 550px;">
     <!-- Modal content-->
     <div class="modal-content">
@@ -11,7 +11,7 @@
         <div class="portlet-body">
           <div class="form-body">
 
-            <%= form_for Task.new, html: { class: "form-horizontal form-row-seperated" } do |f| %>
+            <%= form_for task, html: { class: "form-horizontal form-row-seperated" } do |f| %>
               <div class="form-group row">
                 <label class="col-md-3 control-label required">Title: </label>
                 <div class="col-md-8">
@@ -29,21 +29,21 @@
               <div class="form-group row">
                 <label class="col-md-3 control-label required">Type: </label>
                 <div class="col-md-8">
-                  <%= f.select :task_type_id, options_from_collection_for_select(TaskType.all, 'id', 'name'), {}, class: "form-control" %>
+                  <%= f.select :task_type_id, options_from_collection_for_select(TaskType.all, 'id', 'name', f.object.task_type_id), {}, class: "form-control" %>
                 </div>
               </div>
 
               <div class="form-group row">
                 <label class="col-md-3 control-label">Due Date: </label>
                 <div class="col-md-8">
-                  <%= f.text_field :due_date, class: "form-control datepicker", style: 'z-index:100 !important;', readonly: true, size: "16" %>
+                  <%= f.text_field :due_date, class: "form-control datepicker", style: 'z-index:100 !important;', readonly: true, size: "16", value: f.object.try(:due_date).try(:strftime, '%m/%d/%Y') %>
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="actions col-md-11 text-right">
                   <%= f.submit 'Save', class: 'btn btn-success btn-sm' %>
-                  <%= f.submit 'Clear', class: 'btn btn-sm', type: 'reset' %>
+                  <%= f.submit 'Reset', class: 'btn btn-sm', type: 'reset' %>
                 </div>
               </div>
             <% end %>

@@ -7,5 +7,7 @@ class HomeController < ApplicationController
       in_progress: all_tasks.in_progress,
       completed: all_tasks.completed
     }
+
+    @task = Task.new
   end
 end
