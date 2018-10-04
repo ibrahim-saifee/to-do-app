@@ -1,9 +1,13 @@
 <!-- Page Content -->
 <div class="container page-container">
   <!-- Page Heading -->
-  <button class="btn">
-    Add New Task &nbsp; <i class="fa fa-plus"></i>
-  </button>
+  <a class="btn" data-toggle="modal" data-target=".new_task_modal">
+    <button type="button" class="btn btn-success btn-sm">
+      Add New Task &nbsp; <i class="fa fa-plus"></i>
+    </button>
+  </a>
+
+  <%= render template: 'tasks/new' %>
 
   <div class="row page-body-container">
     <% @tasks.each do |task_type, tasks| %>

@@ -9012,3 +9012,8 @@ div.task-type-col {
   padding-top: 15px;
   padding-bottom: 15px
 }
+
+.form-group .control-label.required:after {
+  content: "*";
+  color: red;
+}
