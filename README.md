@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a To-Do app, a task manager application which is used to manage daily tasks.
+It is a best solution replacing inconvenient sticky notes (pen and paper).
 
-Things you may want to cover:
+User account is secured, to keep the task list private.
 
-* Ruby version
+You can find the live application here: https://to-do-task-list.herokuapp.com/
 
-* System dependencies
 
-* Configuration
+Technical Details:
 
-* Database creation
+This is a rails based application designed using rails v 5.2.1 framework and using ruby v 2.5.1 language.
 
-* Database initialization
+For styling and better look, bootstrap v 4.0 (CSS and JS) is used.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+For user authentication devise gem is used.
