@@ -3842,7 +3842,7 @@ input[type="button"].btn-block {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -3952,7 +3952,7 @@ input[type="button"].btn-block {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: inherit;
   white-space: nowrap;
 }
@@ -4368,6 +4368,7 @@ input[type="button"].btn-block {
 
 .card-title {
   margin-bottom: 0.75rem;
+  font-size: 1rem;
 }
 
 .card-subtitle {
@@ -4376,7 +4377,7 @@ input[type="button"].btn-block {
 }
 
 .card-text {
-  font-size: 1.5rem;
+  font-size: 0.85rem;
 }
 .card-text:last-child {
   margin-bottom: 0;
@@ -8991,6 +8992,7 @@ div.portfolio-item {
 h3.task-type {
   text-align: center;
   color: white;
+  font-size: 1.1rem;
 }
 
 .page-container {
@@ -9000,7 +9002,8 @@ h3.task-type {
 
 div.page-body-container {
   padding-top: 15px;
-  padding-bottom: 25px
+  padding-bottom: 25px;
+  min-height: 200px;
 }
 
 div.task-type-col {
