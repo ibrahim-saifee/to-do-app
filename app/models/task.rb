@@ -17,6 +17,6 @@ class Task < ApplicationRecord
   private
 
   def assign_position
-    self.position = Task.maximum(:position).to_i + 1 if self.position.nil?
+    self.position = (Task.maximum(:position) || 0) + 1 if self.position.nil?
   end
 end
